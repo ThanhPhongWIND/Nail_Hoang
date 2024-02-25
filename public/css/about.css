@@ -1,0 +1,10 @@
+.text-about{
+    line-height: 3;
+    text-align: left;
+}
+.img-about{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+.title-about{
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}

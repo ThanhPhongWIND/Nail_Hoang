@@ -1,0 +1,21 @@
+/*CheckList tiệm nail cần thực yêu cầu như sau */
+
+1. Về database
+ - Các table bao gồm:
+	- tbl_users
+	- tbl_contact
+	- tbl_post
+	- tbl_service
+	- tbl_booking
+	- tbl_about
+	- tbl_image_about
+	- tbl_image_post
+2. Viết bằng ngôn ngữ PHP mô hình MVC
+3. Deadline trong vòng 1 tuần
+4. Thu về: 3tr3
+ - Phí domain + hotting: 1tr3
+ - Lợi nhận: 2tr
+5. Mục tiêu phát triển:
+ hệ thống nail 100 website trong năm 2024
+ lợi nhuận thu về tổng: 200tr
+
