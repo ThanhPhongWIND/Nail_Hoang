@@ -20,7 +20,6 @@
 </div>
 
 <main id="main">
-
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="clients clients">
     <div class="container">
@@ -291,39 +290,48 @@
       </div>
 
     </div>
-  </section><!-- End Contact Section -->
-  <div class="scroll-top-btn">
-    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
-      <i class="bx bxs-up-arrow-alt"></i>
-    </button>
-  </div>
+  </section>
+    <!-- End Contact Section -->
+    <!--  <div class="scroll-top-btn">-->
+    <!--    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">-->
+    <!--      <i class="bx bxs-up-arrow-alt"></i>-->
+    <!--    </button>-->
+    <!--  </div>-->
+</main>
 
-</main><!-- End #main 
-<!-- Popup HTML -->
-<div id="overlay"></div>
-<div id="popup-background">
-  <div id="popup-content">
-    <!-- Content of your popup goes here -->
-    <span id="close-popup">&times;</span>
-    <img src="public/images/detail_5.png" alt="Popup Image">
-  </div>
+<div class="modal-main">
+    <div class="modal-main__inner">
+        <button class="modal-main__exit" id="btnModalMain">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="modal-main__header"></div>
+        <div class="modal-main__body">
+            <img src="public/images/modal.jpg" alt="img modal">
+        </div>
+        <div class="modal-main__footer"></div>
+    </div>
 </div>
-<!-- End Popup HTML -->
+
+
 <?php get_footer(); ?>
 <script>
-  // Đợi cho tài liệu được tải hoàn toàn
-  document.addEventListener("DOMContentLoaded", function() {
-    // Lấy tham chiếu đến phần tử nút đóng popup
-    var closeButton = document.getElementById("close-popup");
-    // Lấy tham chiếu đến phần tử overlay và popup-background
-    var overlay = document.getElementById("overlay");
-    var popupBackground = document.getElementById("popup-background");
+  $(document).ready(function () {
+      $(document).on("keyup",function(e) {
+          if (e.key === "Escape") {
+              $(".modal-main").removeClass("active")
+          }
+      });
 
-    // Thêm sự kiện click vào nút đóng popup
-    closeButton.addEventListener("click", function() {
-      // Ẩn overlay và popup-background khi click vào nút đóng popup
-      overlay.style.display = "none";
-      popupBackground.style.display = "none";
-    });
-  });
+      $(".modal-main").addClass("active")
+
+      $(".modal-main").on("click", function (){
+          $(".modal-main").removeClass("active")
+      })
+
+
+
+      $("#btnModalMain").on("click", function () {
+          $(this).closest(".modal-main").removeClass("active")
+      })
+  })
 </script>
